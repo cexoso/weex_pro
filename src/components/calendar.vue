@@ -1,5 +1,9 @@
 <template>
   <div>
+      <div class="calendar_header">
+          <text class="calendar_header_year">2018</text>
+          <text class="calendar_header_month">/1月</text>
+      </div>
     <div class="calendar_day_row" v-for="(arr, key) in days" :key="key">
       <text class="calendar_day_col" :class="itemCls(year, month, day)" v-for="(day) in arr" :key="day">
         {{day}}
@@ -29,8 +33,23 @@ export default {
 </script>
 
 <style scoped>
+    .calendar_header{
+        flex-direction: row;
+        align-items: baseline;
+        background-color: #1dbe8c;
+    }
+    .calendar_header_year,
+    .calendar_header_month{
+        color: #fff;
+    }
+    .calendar_header_year{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .calendar_header_month{
+        font-size: 12px;
+    }
   .calendar_day_row{
-    display: flex;
     flex-direction: row;
     align-items: center;
   }
