@@ -3,7 +3,7 @@
     <text>
       日历
     </text>
-    <calendar :month="month" :year="year" :itemCls="itemCls" />
+    <calendar :month="month" :year="year" :itemStyle="itemStyle" />
   </div>
   
 </template>
@@ -18,11 +18,11 @@ export default {
     return {
       month: currentDate.getMonth(),
       year: currentDate.getFullYear()
-    }
+    };
   },
   methods: {
-    itemCls(y, m, d) {
-      return d % 2 ? 'red' : ''
+    itemStyle(y, m, d) {
+      return d % 2 && { color: "red" };
     }
   }
 };

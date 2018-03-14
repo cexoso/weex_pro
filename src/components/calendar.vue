@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="calendar_day_row" v-for="(arr, key) in days" :key="key">
-      <text class="calendar_day_col" :class="itemCls(year, month, day)" v-for="(day) in arr" :key="day">
-        {{day}} x
+      <text class="calendar_day_col" :style="itemStyle(year, month, day)" v-for="(day) in arr" :key="day">
+        {{day}}
       </text>
     </div>
   </div>
@@ -13,16 +13,16 @@ export default {
   props: {
     year: Number,
     month: Number,
-    itemCls: {
+    itemStyle: {
       type: Function,
-      default: () => ''
+      default: () => ""
     }
   },
   computed: {
     days() {
-      const maxDay = getMaxDay(this.year, this.month)
-      const allDays = Array.from({length: maxDay}).map((_, k) => k + 1)
-      return chunk(allDays, 7)
+      const maxDay = getMaxDay(this.year, this.month);
+      const allDays = Array.from({ length: maxDay }).map((_, k) => k + 1);
+      return chunk(allDays, 7);
     }
   }
 };
