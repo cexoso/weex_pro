@@ -2,7 +2,7 @@
   <div>
     <div class="calendar_day_row" v-for="(arr, key) in days" :key="key">
       <text class="calendar_day_col" :class="itemCls(year, month, day)" v-for="(day) in arr" :key="day">
-        {{day}}
+        {{day}} x
       </text>
     </div>
   </div>
