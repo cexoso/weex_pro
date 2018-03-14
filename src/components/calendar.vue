@@ -29,7 +29,16 @@ export default {
 </script>
 
 <style scoped>
-.calendar_day_row {
-  display: flex;
-}
+  .calendar_day_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .calendar_day_col{
+    width: 14.28%;
+    height: 80px;
+    line-height: 80px;
+    white-space: nowrap;
+    text-align: center;
+  }
 </style>
