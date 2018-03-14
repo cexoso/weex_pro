@@ -4837,6 +4837,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+natjs@^0.1.5:
+  version "0.1.5"
+  resolved "http://registry.npm.taobao.org/natjs/download/natjs-0.1.5.tgz#8be73496b46e46b745d0fe83cd18ed1409874dda"
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
