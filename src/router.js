@@ -1,5 +1,5 @@
 import Router from 'vue-router'
-import calendar from '@/components/calendar'
+import index from '@/components/index'
 
 Vue.use(Router)
 
@@ -8,7 +8,7 @@ module.exports = new Router({
     {
       path: '/',
       name: 'calendar',
-      component: calendar
+      component: index
     }
   ]
 })
